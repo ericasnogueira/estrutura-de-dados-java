@@ -26,8 +26,7 @@ public class Exercicio01 {
         }
 
         System.out.println("NUMEROS NEGATIVOS : ");
-        //imprimindo o vetor
-        for (int i = 0; i< vetor.length;i ++){
+        for (int i = 0; i< vetor.length;i ++){// percorrendo a lista toda
             //System.out.println(vetor[i]);
             if(vetor[i] < 0){
                 System.out.println(vetor[i]);
