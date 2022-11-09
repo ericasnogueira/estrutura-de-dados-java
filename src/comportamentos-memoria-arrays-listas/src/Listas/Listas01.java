@@ -2,6 +2,7 @@ package Listas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Listas01 {
     public static void main(String[] args) {
@@ -47,6 +48,21 @@ public class Listas01 {
         //encotrando a posição do elemento
         System.out.println("INDEX BOB : " + lista.indexOf("Bob"));
         System.out.println(lista.indexOf("Bob"));
+
+
+        //filtrando a lista com todo mundo que começa com A
+
+        //declarando uma nova lista e pegando da lista anterior, filtrando os nomes que comeca com A
+        List<String> resultado = lista.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+        System.out.println("---------------------------");
+        for(String i : resultado){
+            System.out.println(i);
+        }
+
+        System.out.println("---------------------");
+        //encontrando na lista um certo elemento que atenda a um predicado
+         String nome = lista.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null); //findFirst vai pegar o primeiro elemento da string
+        System.out.println(nome);
 
     }
 }
