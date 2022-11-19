@@ -50,4 +50,9 @@ public class Funcionario {
     public void incrementandoSalario(double porcentagem){
         salario += salario * porcentagem /100.00;
     }
+
+    @Override
+    public String toString() {
+        return  id + ", " + nome + ", " + String.format("%.2f", salario);
+    }
 }

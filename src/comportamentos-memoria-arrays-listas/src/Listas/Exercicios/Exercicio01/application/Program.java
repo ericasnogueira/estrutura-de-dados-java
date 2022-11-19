@@ -28,7 +28,7 @@ public class Program {
 
 
 
-        System.out.println("Quantos funcionarios iram ser registrado ? ");
+        System.out.print("Quantos funcionarios iram ser registrado ? ");
         int numeroFuncionario = entrada.nextInt();
 
         for (int i =0;i <numeroFuncionario;i++){
@@ -52,8 +52,9 @@ public class Program {
             listaFuncionario.add(fun);
         }
 
+        System.out.println();
         //perguntando qual funcionario que ira ter o salario encrementado
-        System.out.println("Qual funcionanrio gostaria de encrementar o salario:  ");
+        System.out.print("Qual funcionanrio gostaria de encrementar o salario:  ");
         int idSalario = entrada.nextInt();
 
         Integer posicao = posicaoId(listaFuncionario, idSalario);// procurando o idSalario na posição //
@@ -66,7 +67,14 @@ public class Program {
             listaFuncionario.get(posicao).incrementandoSalario(porcentagem);
         }
 
+        System.out.println();
+        System.out.println("Lista de Funcionarios :");
 
+        //mostrando os funcionarios
+        for(Funcionario funcionario : listaFuncionario){
+            System.out.println(funcionario);
+
+        }
 
 
     }
