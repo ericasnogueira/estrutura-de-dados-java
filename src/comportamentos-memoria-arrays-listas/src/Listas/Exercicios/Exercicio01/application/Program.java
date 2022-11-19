@@ -60,7 +60,10 @@ public class Program {
         if(posicao ==null){
             System.out.println("Esse Id Funcionario não existe!");
         } else { // se o id existi tera que aumenta o seu salario
-
+            System.out.print("Entre com a porcentagem de aumento do funcionario : ");
+            double porcentagem = entrada.nextDouble();
+            //acessando na lista para pegar o id do funcionario para ver o seu salario e fazer o aumento desejado
+            listaFuncionario.get(posicao).incrementandoSalario(porcentagem);
         }
 
 
