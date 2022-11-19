@@ -35,11 +35,11 @@ public class Program {
 
             System.out.println();
 
-            System.out.println("Funcionario #"+(i +1) + ":");
+            System.out.println("Funcionario #"+(i +1) + ":");// p
             System.out.print("Id: ");
             Integer id = entrada.nextInt();
             System.out.print("Nome: ");
-            entrada.nextLine();//quebra de linha
+            entrada.nextLine();//quebra de linha // se não tiver ia pular diretamente para o salario
             String nome = entrada.nextLine();
             System.out.print("Salario: ");
             Double salario = entrada.nextDouble();
@@ -52,20 +52,32 @@ public class Program {
             listaFuncionario.add(fun);
         }
 
+        //perguntando qual funcionario que ira ter o salario encrementado
+        System.out.println("Qual funcionanrio gostaria de encrementar o salario:  ");
+        int idSalario = entrada.nextInt();
 
+        Integer posicao = posicaoId(listaFuncionario, idSalario);// procurando o idSalario na posição //
+        if(posicao ==null){
+            System.out.println("Esse Id Funcionario não existe!");
+        } else { // se o id existi tera que aumenta o seu salario
 
-
-
-
-
-
-
-
-
-
+        }
 
 
 
 
     }
+    //função auxiliar para ver se o ID do funcionario está cadastrado ou não
+    //retorna  a posição do funcionario na lista
+    //public é opcional por está na mesma classe
+    static Integer posicaoId(List<Funcionario> lista, int id){// o papel do metodo é falar qual é a posição do funcionario na lista
+        for (int i =0;i<lista.size();i++){//lista.size é o tamanho da lista
+            //id da posição é igual ao id da posição que queremos
+            if(lista.get(i).getId()== id) {// get(i) - pegar o elemento na posição
+                return i;
+            }
+        }
+        return  null; // indicando que o elemento(id) não foi encotrado na lista
+    }
+
 }
