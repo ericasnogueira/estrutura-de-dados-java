@@ -31,8 +31,8 @@ public class Program {
         }
         int negativo = 0;
         //percorrendo linhas(i) e colunas(j)
-        for(int i =0;i<n; i++){
-            for (int j=0;j<n;j++){
+        for(int i =0;i<matriz.length; i++){//na quantidade de linhas pode fazer assim
+            for (int j=0;j<matriz[i].length;j++){//na quantidade de colunas pode fazer assim
                 if(matriz[i][j]< 0){ //if algum numero da linha i e coluna j for negativo
                     negativo ++;
                 }
