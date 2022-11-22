@@ -22,5 +22,12 @@ public class Program {
                 matriz[i][j] = entrada.nextInt(); // adicionando na linha e na coluna da matriz
             }
         }
+
+        //diagonal principal //obs :  os valores da linha e da coluna são os mesmo (pelo menos nesse exemplo)
+        System.out.println("Diagonal principal : ");
+        for(int i =0;i<n;i++){
+            //liha i e coluna i
+            System.out.print(matriz[i][i] + " ");
+        }
     }
 }
