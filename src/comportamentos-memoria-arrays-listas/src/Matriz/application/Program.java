@@ -29,5 +29,16 @@ public class Program {
             //liha i e coluna i
             System.out.print(matriz[i][i] + " ");
         }
+        int negativo = 0;
+        //percorrendo linhas(i) e colunas(j)
+        for(int i =0;i<n; i++){
+            for (int j=0;j<n;j++){
+                if(matriz[i][j]< 0){ //if algum numero da linha i e coluna j for negativo
+                    negativo ++;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("Quantidade de Numeros Negativos : " + negativo);
     }
 }
