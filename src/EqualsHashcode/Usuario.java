@@ -18,5 +18,4 @@ public class Usuario {
         return nomeIgual && emailIgual;
     }
 
-    
 }
