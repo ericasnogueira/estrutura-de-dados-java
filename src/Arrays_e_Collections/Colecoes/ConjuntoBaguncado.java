@@ -4,14 +4,18 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ConjuntoBaguncado {
+
+    //set - heterogeneo
+
+    @SuppressWarnings({"unchecked","rawtypes"})// para não ficar com a linha amarela
     public static void main(String[] args) {
 
 
-        HashSet conjunto = new HashSet();
+        HashSet conjunto = new HashSet();//aqui ~~~~~~~~
 
 
         // não aceita tipos primitivo, automaticamente ira converte eles
-        conjunto.add(1.2); // double -> Double
+        conjunto.add(1.2); // double -> Double  ---------------e aqui na parte do nome variavel/instancia ~~~~~~~~~~~~
         conjunto.add(true); //boobean -> Boolean
         conjunto.add("Teste"); //String
         conjunto.add(1); // int -> Integer
