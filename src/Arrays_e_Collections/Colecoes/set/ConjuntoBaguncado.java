@@ -1,4 +1,4 @@
-package Arrays_e_Collections.Colecoes;
+package Arrays_e_Collections.Colecoes.set;
 
 import java.util.HashSet;
 import java.util.Set;
